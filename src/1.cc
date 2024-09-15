@@ -1,6 +1,6 @@
 #include <algorithm>
 #include <iostream>
-#include <gtest>
+// #include <gtest/gtest.h>
 
 class S21Matrix{
     private:
@@ -68,7 +68,7 @@ int main(){
     S21Matrix a(std::move(b)); // конвертирование из lvalue в rvalue, перенос матрицы. В отличии от копирования - не создается новый объект, здесь же просто перенос, а объект b зануляется
     */
     S21Matrix b(3, 3);
-    S21Matrix a(3, 3);
-    EXPECT_THROW(a+b, std::invalid_argument);
-
+    S21Matrix a(2, 3);
+    // EXPECT_THROW(a+b, std::invalid_argument);
+    a.SumMatrix(b);
 }
