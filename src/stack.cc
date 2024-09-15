@@ -1,7 +1,10 @@
 // lifo - стек
 // fifo - очередь
 
-#include<vector>
+#ifndef HEAD_H
+#define HEAD_H
+
+#include <vector>
 
 int main() {
 
@@ -10,5 +13,8 @@ int main() {
     return 0;
 
 }
+
+#endif
+#pragma once
 
 // сайт cppreference
