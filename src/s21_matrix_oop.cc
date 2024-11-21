@@ -32,8 +32,6 @@ S21Matrix::S21Matrix(const S21Matrix &other)
   }
 }
 
-// S21Matrix::S21Matrix(const S21Matrix& other) { this->copy_matrix(other); }
-
 S21Matrix::S21Matrix(S21Matrix &&other) {
   rows_ = other.rows_;
   cols_ = other.cols_;
@@ -189,24 +187,6 @@ S21Matrix &S21Matrix::operator=(const S21Matrix &other) {
   }
   return *this;
 }
-
-// S21Matrix &S21Matrix::operator=(const S21Matrix &other) {
-//   S21Matrix copy{other};
-//   remove_matrix();
-//   *this = std::move(copy);
-//   return *this;
-// }
-
-// S21Matrix &S21Matrix::operator=(S21Matrix &&other) noexcept {
-//   if (this != &other) {
-//     remove_matrix();
-//     std::swap(rows_, other.rows_);
-//     std::swap(cols_, other.cols_);
-//     std::swap(matrix_, other.matrix_);
-//   }
-
-//   return *this;
-// }
 
 S21Matrix &S21Matrix::operator+=(const S21Matrix &other) {
   SumMatrix(other);

@@ -67,12 +67,9 @@ class S21Matrix {
   // Matrix multiplication and matrix multiplication by a number
   S21Matrix operator*(const double num) const;
   S21Matrix operator*(const S21Matrix& other) const;
-  // ЧТО ЭТО???    friend S21Matrix operator*(const double left, const
-  // S21Matrix& right); Checks for matrices equality (eq_matrix)
+  // Checks for matrices equality (eq_matrix)
   bool operator==(const S21Matrix& other);
   // Assignment of values from one matrix to another one
-  // S21Matrix& operator=(const S21Matrix& other);
-  // S21Matrix& operator=(S21Matrix &&other) noexcept;
   S21Matrix& operator=(const S21Matrix& other);
   // Addition assignment (sum_matrix)
   S21Matrix& operator+=(const S21Matrix& other);
